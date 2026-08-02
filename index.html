@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="CarePoint CyberSafe, focused cybersecurity training for healthcare phishing and prevention of patient data breaches." name="description"/>
+<title>CarePoint CyberSafe | Staff Operations Portal</title>
+<style>
+:root{--navy:#071b31;--navy2:#0c2b4a;--blue:#1667d9;--cyan:#1aa8c8;--green:#087f5b;--red:#c93636;--amber:#d98500;--ink:#172230;--muted:#5d6b79;--paper:#f4f7fb;--white:#fff;--line:#d9e2ec;--shadow:0 20px 55px rgba(4,24,43,.13);--radius:22px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Helvetica Neue",sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}button,input{font:inherit}a{color:inherit}.shell{width:min(1160px,calc(100% - 40px));margin:auto}.narrow{width:min(840px,calc(100% - 40px))}.skip-link{position:fixed;left:20px;top:-80px;background:#fff;padding:12px 18px;z-index:999;border-radius:8px}.skip-link:focus{top:16px}.topbar{position:sticky;top:0;z-index:50;background:rgba(7,27,49,.96);backdrop-filter:blur(12px);color:#fff}.nav-wrap{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none}.brand-icon{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--blue));display:grid;place-items:center;font-size:26px;font-weight:700}.brand b,.brand small{display:block}.brand small{font-size:11px;color:#a9bdd1;letter-spacing:.08em;text-transform:uppercase}.nav-links{display:flex;gap:18px}.nav-links a{text-decoration:none;font-size:14px;color:#d8e5f0}.nav-links a:hover,.nav-links a:focus{color:#fff}.menu-btn{display:none;background:transparent;border:1px solid #597087;color:#fff;border-radius:8px;padding:8px 12px}.progress-track{height:3px;background:#173b5c}.progress-bar{width:0;height:100%;background:linear-gradient(90deg,var(--cyan),#77e3d2)}.hero{padding:90px 0;background:radial-gradient(circle at 85% 20%,#174d79 0,transparent 28%),linear-gradient(135deg,#06182c,#0a2c4b);color:#fff}.hero-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:58px;align-items:center}.kicker{text-transform:uppercase;letter-spacing:.13em;font-weight:700;font-size:12px;color:#39c6d6}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.05;margin:14px 0 22px;max-width:900px}.lead{font-size:20px;color:#d4e1eb;max-width:760px}.hero-actions{display:flex;gap:12px;margin:30px 0}.btn{border:0;border-radius:11px;padding:13px 20px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}.primary{background:linear-gradient(135deg,var(--cyan),var(--blue));color:#fff}.secondary{background:transparent;border:1px solid #7b91a7;color:inherit}.evidence-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}.evidence-strip article{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);padding:18px;border-radius:15px}.evidence-strip strong{display:block;font-size:25px}.evidence-strip span{font-size:12px;color:#c6d6e2}.source-note{font-size:12px;color:#788a9a;margin-top:16px}.dark .source-note,.navy .source-note,.hero .source-note{color:#a9bdcc}.hero-card{background:#fff;color:var(--ink);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}.hero-card h2{margin:8px 0 15px}.hero-card ol{padding-left:20px}.status{font-size:13px;color:var(--green);font-weight:700}.status span{display:inline-block;width:9px;height:9px;background:#19b77d;border-radius:50%;margin-right:8px}.time-badge{background:#e8f5ff;color:#124f8e;padding:12px 14px;border-radius:10px;font-weight:700;font-size:13px}.section{padding:85px 0}.light{background:#f5f8fc}.dark{background:#091f36;color:#f6fbff}.navy{background:#0b2947;color:#fff}.section-head{max-width:850px;margin-bottom:34px}.section-head h2{font-size:clamp(32px,4vw,48px);line-height:1.13;margin:8px 0 16px}.section-head>p:not(.kicker):not(.source-note){font-size:18px;color:var(--muted)}.dark .section-head>p:not(.kicker):not(.source-note),.navy .section-head>p:not(.kicker):not(.source-note){color:#c9d6e1}.role-grid,.control-grid,.scenario-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.role-grid article,.control-grid article,.scenario,.panel{background:#fff;border:1px solid var(--line);padding:24px;border-radius:18px;box-shadow:0 10px 32px rgba(8,30,50,.06)}.role-grid span,.control-grid span{font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--blue)}.crown-panel{margin-top:24px;background:var(--navy);color:#fff;border-radius:20px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.mini-label{text-transform:uppercase;letter-spacing:.1em;font-size:11px;font-weight:700;color:var(--cyan)}.connection{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}.connection span{background:#fff;color:var(--navy);padding:10px 15px;border-radius:999px}.connection b{font-size:12px;color:#b5c8d7}.procedure-card{background:linear-gradient(135deg,#0a7355,#099b73);color:#fff;padding:24px;border-radius:18px;display:grid;grid-template-columns:110px 1fr;gap:22px;align-items:center;margin:28px 0}.procedure-card.blue{background:linear-gradient(135deg,#1451a0,#1775df)}.procedure-code{font-size:17px;font-weight:800;border:1px solid rgba(255,255,255,.4);padding:20px 10px;border-radius:12px;text-align:center}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}.dark .panel{background:#102e4a;border-color:#274b68;color:#fff}.icon-list{padding-left:20px}.icon-list li{margin:11px 0}.email-lab{background:#fff!important;color:var(--ink)!important}.email-top{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:14px}.email-top div{flex:1}.email-top small{display:block;color:var(--muted)}.avatar{width:40px;height:40px;border-radius:50%;background:#e7f1ff;display:grid;place-items:center;font-weight:800;color:var(--blue)}.tag{font-size:11px;font-weight:700;padding:6px 9px;border-radius:999px}.danger{background:#fde9e9;color:var(--red)}.fake-link{background:#1868d5;color:#fff;border:0;border-radius:8px;padding:10px 14px}.clue-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.clue-row button{border:1px solid #b9c8d6;background:#f7fafc;border-radius:8px;padding:8px 10px;cursor:pointer}.feedback{background:#edf5ff;padding:12px;border-radius:9px;font-size:14px}.workflow,.response-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin:28px 0}.workflow article,.response-grid article{padding:22px;border-radius:16px;background:#10304d;border:1px solid #29506f}.workflow span,.response-grid span{font-size:30px;font-weight:800;color:#48cad4}.incident{background:#fff;color:var(--ink);border-radius:20px;padding:26px;margin-top:25px}.incident-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 22px}.control-grid{grid-template-columns:repeat(3,1fr)}.decision-box{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:30px}.before-send{display:flex;flex-direction:column;gap:10px}.before-send label{background:#f3f7fb;padding:10px;border-radius:8px}.critical-note{margin-top:22px;border-left:5px solid var(--amber);background:#fff4db;padding:22px;border-radius:0 14px 14px 0}.contact-card{display:flex;align-items:center;justify-content:space-between;background:#fff;color:var(--ink);border-radius:18px;padding:24px;margin:28px 0}.legal-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:12px}.legal-flow div{background:#123858;padding:18px;border-radius:14px}.legal-flow b,.legal-flow span{display:block}.legal-flow span{font-size:12px;color:#c3d2dd;margin-top:5px}.legal-flow i{font-size:25px}.scenario{display:flex;flex-direction:column}.scenario button{width:100%;text-align:left;border:1px solid var(--line);background:#f8fafc;padding:11px;margin:5px 0;border-radius:9px;cursor:pointer}.scenario button.correct{background:#e3f8ef;border-color:#0a8c65}.scenario button.incorrect{background:#fdeaea;border-color:#c93636}.scenario-feedback{font-weight:700;min-height:24px}.quiz-form fieldset{background:#102e4a;border:1px solid #2b506d;border-radius:16px;padding:20px;margin:14px 0}.quiz-form legend{font-weight:700;padding:0 6px}.quiz-form label{display:block;padding:8px}.quiz-result{margin-top:20px;background:#fff;color:var(--ink);padding:24px;border-radius:16px}.references ol{padding-left:22px}.academic-note{padding:15px;background:#edf3f8;border-radius:10px;font-size:13px}footer{background:#06182c;color:#cbd9e4;padding:30px 0}.footer-wrap{display:flex;justify-content:space-between;align-items:center}.footer-wrap p{margin:4px 0;font-size:12px}@media(max-width:900px){.hero-grid,.two-col,.crown-panel,.decision-box{grid-template-columns:1fr}.role-grid,.control-grid,.scenario-grid{grid-template-columns:1fr 1fr}.workflow,.response-grid{grid-template-columns:1fr 1fr}.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#081f36;padding:18px 20px;flex-direction:column}.nav-links.open{display:flex}.menu-btn{display:block}.evidence-strip{grid-template-columns:1fr}.legal-flow{grid-template-columns:1fr}.legal-flow i{transform:rotate(90deg);text-align:center}}@media(max-width:600px){.shell,.narrow{width:min(100% - 24px,1160px)}.hero{padding:65px 0}.hero h1{font-size:42px}.section{padding:60px 0}.role-grid,.control-grid,.scenario-grid,.workflow,.response-grid,.incident-grid{grid-template-columns:1fr}.procedure-card{grid-template-columns:1fr}.contact-card,.footer-wrap{align-items:flex-start;flex-direction:column;gap:15px}}@media print{.topbar,.hero,.section:not(#response),footer,.no-print{display:none!important}#response{display:block!important;background:#fff!important;color:#000!important;padding:0}.response-grid,.legal-flow,.section-head,.source-note{display:none!important}.contact-card{border:2px solid #000;box-shadow:none}.contact-card button{display:none}}
+.threat-panel{background:#0d2b47;border:1px solid #27506f;border-radius:20px;padding:26px;margin-bottom:26px}
+.threat-rows{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:16px 0}
+.threat-rows div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:13px;padding:16px}
+.threat-rows b{display:block;font-size:30px;line-height:1;color:#48cad4;margin-bottom:8px}
+.threat-rows span{font-size:12px;color:#c6d6e2;line-height:1.45}
+.threat-read{margin:0;font-size:14px;color:#a9c3d6;border-top:1px solid rgba(255,255,255,.12);padding-top:14px}
+.light .threat-read,.white .threat-read{color:var(--muted);border-top-color:var(--line)}
+.case-panel{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.case-facts,.case-relevance{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 10px 32px rgba(8,30,50,.06)}
+.case-relevance{background:#fff8e6;border-color:#eadca9}
+.case-relevance p{margin:0 0 13px}
+.case-facts .icon-list li{margin:9px 0;font-size:15px}
+.measure-strip{margin-top:26px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:18px;padding:24px}
+.measure-strip>div{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}
+.measure-strip span{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px;font-size:13px;color:#d3e0ea}
+@media(max-width:900px){.threat-rows,.case-panel,.measure-strip>div{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.threat-rows,.case-panel,.measure-strip>div{grid-template-columns:1fr}}
+@media print{.threat-panel,.case-panel,.measure-strip{display:none!important}}
+.light-panel{background:#eef4fa;border-color:var(--line);margin:24px 0}
+.light-panel .mini-label{color:#124f8e}
+.light-panel .threat-rows div{background:#fff;border-color:var(--line)}
+.light-panel .threat-rows b{color:var(--blue)}
+.light-panel .threat-rows span{color:var(--muted)}
+.light-panel .threat-read{color:var(--muted);border-top-color:var(--line)}
+
+/* Rationale panels sit on a .navy section: force readable dark card + light text */
+.navy .panel{background:#102e4a;border-color:#274b68;color:#eef4fb}
+.navy .panel h3{color:#fff}
+.navy .panel p{color:#dce7f2}
+.navy .panel i{color:#9fb6c9}
+.navy .measure-strip .mini-label{color:#48cad4}
+
+
+/* 90+ enhancement components */
+.matrix-card,.visual-learning,.flow-card,.comparison-card{margin-top:26px}
+.matrix-card,.flow-card,.comparison-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 10px 32px rgba(8,30,50,.06);color:var(--ink)}
+.section-mini h3{margin:4px 0 6px;font-size:26px}.section-mini p:last-child{margin-top:4px;color:var(--muted)}
+.table-wrap{overflow-x:auto}.risk-table,.compare-table{width:100%;border-collapse:collapse;margin-top:16px;min-width:680px}.risk-table th,.risk-table td,.compare-table th,.compare-table td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}.risk-table th,.compare-table th{background:#edf4fa;color:#123858;font-size:12px;text-transform:uppercase;letter-spacing:.06em}.risk-table td,.compare-table td{font-size:14px}.rating{display:inline-block;padding:4px 9px;border-radius:999px;font-size:11px;font-weight:800}.rating.high{background:#fde7e7;color:#a82525}.rating.medium{background:#fff1d6;color:#8b5900}
+.visual-learning{display:grid;grid-template-columns:1fr 1fr;gap:20px}.flow-card h3,.comparison-card h3{margin:5px 0 18px}.flow-line{display:flex;flex-direction:column;align-items:center;gap:8px}.flow-line span{width:100%;text-align:center;background:#eef5fb;border:1px solid #cadbe9;padding:12px;border-radius:11px;font-weight:700}.flow-line i{font-style:normal;color:var(--blue);font-size:24px;line-height:1}.branch{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px}.branch div{padding:15px;border-radius:12px;background:#eaf8f2;border:1px solid #b9e2d2}.branch div:last-child{background:#fff0f0;border-color:#edc2c2}.branch b,.branch span{display:block}.branch span{font-size:13px;margin-top:5px;color:var(--muted)}
+.patient-flow{margin:26px 0}.flow-line.horizontal{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;align-items:center}.flow-line.horizontal span{height:100%;display:grid;place-items:center}.flow-alert{margin:18px 0 0;background:#fff3d7;border-left:4px solid var(--amber);padding:13px 15px;border-radius:0 10px 10px 0}.lesson-box{margin-top:16px;background:#fff;border:1px solid #ddc878;padding:15px;border-radius:12px}.lesson-box b,.lesson-box span{display:block}.lesson-box span{font-size:14px;margin-top:5px}.critical-conclusion{background:#0b243c;padding:16px;border-left:4px solid #48cad4;border-radius:0 10px 10px 0}.action-summary{background:linear-gradient(135deg,#eaf5ff,#ecfbf7)}.action-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.action-grid article{background:#fff;border:1px solid var(--line);border-radius:17px;padding:22px;box-shadow:0 8px 26px rgba(8,30,50,.06)}.action-grid span{font-size:13px;font-weight:800;color:var(--blue)}.action-grid h3{margin:6px 0}.action-grid p{margin:0;color:var(--muted)}
+@media(max-width:900px){.visual-learning{grid-template-columns:1fr}.flow-line.horizontal{grid-template-columns:1fr}.flow-line.horizontal i{transform:rotate(90deg);text-align:center}.action-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.branch,.action-grid{grid-template-columns:1fr}.matrix-card,.flow-card,.comparison-card{padding:20px}}
+@media print{.matrix-card,.visual-learning,.patient-flow,.action-summary{display:none!important}}
+
+/* 98-target consultancy enhancements */
+.dashboard-section{background:linear-gradient(180deg,#eef5fb,#fff)}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:22px}.kpi-grid article{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 12px 28px rgba(8,30,50,.07)}.kpi-grid strong{display:block;font-size:34px;line-height:1.1;color:var(--navy);margin:7px 0}.kpi-grid p{font-size:13px;color:var(--muted);margin:0}.kpi-label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:800;color:var(--blue)}
+.dashboard-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:20px}.heatmap-card,.priority-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}.heatmap{display:grid;grid-template-columns:28px 1fr;grid-template-rows:1fr 25px;max-width:560px;margin:18px auto}.axis-y{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:12px;font-weight:700;color:var(--muted)}.axis-x{grid-column:2;text-align:center;font-size:12px;font-weight:700;color:var(--muted)}.heat-grid{display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(5,52px);gap:4px}.cell{border-radius:6px;display:flex;align-items:center;justify-content:center;gap:4px;min-width:0}.cell b{background:#071b31;color:#fff;border-radius:999px;padding:5px 7px;font-size:11px}.l1{background:#dff3e8}.l2{background:#c9e9ad}.l3{background:#ffe39a}.l4{background:#ffc077}.l5{background:#f58b82}.risk-key{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px}.risk-key span{background:#f4f7fb;padding:8px;border-radius:8px}.priority-list{padding:0;list-style:none;counter-reset:item}.priority-list li{display:grid;grid-template-columns:34px 1fr;gap:8px;margin:18px 0}.priority-list li:before{counter-increment:item;content:counter(item);width:30px;height:30px;border-radius:9px;background:#e7f1ff;color:var(--blue);font-weight:800;display:grid;place-items:center}.priority-list b,.priority-list span{grid-column:2}.priority-list span{font-size:13px;color:var(--muted)}.maturity{background:#f4f7fb;padding:16px;border-radius:14px;margin-top:20px}.maturity>b{float:right}.maturity div{clear:both;background:#d9e2ec;height:8px;border-radius:99px;margin:10px 0}.maturity i{display:block;height:100%;background:linear-gradient(90deg,var(--cyan),var(--blue));border-radius:99px}.maturity small{color:var(--muted)}
+.role-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.role-tabs button{border:1px solid var(--line);background:#fff;padding:10px 14px;border-radius:999px;cursor:pointer;font-weight:700}.role-tabs button[aria-selected="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}.role-panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:28px;box-shadow:0 12px 32px rgba(8,30,50,.07)}.role-panel ul{margin:0;padding-left:22px}.role-panel li{margin:10px 0}
+.roadmap-section{background:#071b31;color:#fff}.roadmap-section .section-head>p:not(.kicker){color:#c9d6e1}.bia-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.bia-grid article{background:#102e4a;border:1px solid #29506f;border-radius:17px;padding:21px}.bia-grid span{color:#48cad4;text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:800}.bia-grid p{color:#c9d6e1;font-size:14px}.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}.timeline article{background:#fff;color:var(--ink);border-radius:18px;padding:23px;position:relative}.timeline span{color:var(--blue);font-weight:800;font-size:12px;text-transform:uppercase}.timeline li{margin:8px 0}.controls-table table{width:100%;border-collapse:collapse;background:#fff;color:var(--ink);border-radius:16px;overflow:hidden}.controls-table th,.controls-table td{padding:14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}.controls-table th{background:#eaf2f8;color:var(--navy)}
+.modal[hidden]{display:none}.modal{position:fixed;inset:0;background:rgba(2,15,28,.75);z-index:200;display:grid;place-items:center;padding:20px}.modal-card{background:#fff;color:var(--ink);width:min(780px,100%);max-height:90vh;overflow:auto;border-radius:22px;padding:32px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.35)}.modal-close{position:absolute;right:15px;top:12px;border:0;background:transparent;font-size:30px;cursor:pointer}.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:20px 0}.guide-grid section{background:#f4f7fb;border-radius:14px;padding:17px}.guide-grid h3{margin-top:0}
+button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid #ffbf47;outline-offset:3px}.table-wrap{overflow-x:auto}
+@media(max-width:900px){.kpi-grid,.bia-grid{grid-template-columns:1fr 1fr}.dashboard-grid,.role-panel{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.nav-links{max-height:calc(100vh - 72px);overflow:auto}}
+@media(max-width:600px){.kpi-grid,.bia-grid,.guide-grid,.risk-key{grid-template-columns:1fr}.heat-grid{grid-template-rows:repeat(5,42px)}.controls-table{font-size:13px}}
+@media print{body.print-guide .modal{position:static;background:#fff;padding:0}.modal:not([hidden]){display:block}.modal-card{box-shadow:none;max-height:none;width:100%;padding:0}.modal-close,.modal-card>.btn{display:none!important}}
+
+
+.ai-acknowledgement p { margin: 0; }
+
+/* Interactive wrong recipient email activity */
+.wrong-recipient-activity{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 12px 32px rgba(8,30,50,.07)}
+.activity-intro{max-width:820px;margin-bottom:22px}.activity-intro h3{margin:5px 0 10px}
+.activity-step{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
+.activity-step:first-of-type{border-top:0}.step-number{width:54px;height:54px;border-radius:16px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:13px;text-align:center}
+.activity-step h4,.activity-complete h4{font-size:20px;margin:0 0 12px}.activity-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.activity-options button{border:1px solid var(--line);background:#f7fafc;color:var(--ink);padding:13px 14px;border-radius:11px;text-align:left;cursor:pointer;transition:border-color .15s,background .15s,transform .15s}
+.activity-options button:hover{border-color:var(--blue);transform:translateY(-1px)}.activity-options button.correct{background:#e3f8ef;border-color:#0a8c65;color:#075c45}.activity-options button.incorrect{background:#fdeaea;border-color:#c93636;color:#8c2525}
+.activity-feedback{min-height:25px;margin:12px 0 0;font-weight:700;color:var(--muted)}.activity-feedback.good{color:#087f5b}.activity-feedback.bad{color:#a62828}
+.activity-step.locked{opacity:.52}.activity-step.locked button,.activity-step.locked input{pointer-events:none}.activity-step.unlocked{opacity:1}.activity-step.unlocked .step-number{background:var(--blue)}
+.safety-checks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.safety-checks label{display:flex;gap:9px;align-items:flex-start;background:#f3f7fb;border:1px solid var(--line);padding:12px;border-radius:10px}.safety-checks input{margin-top:5px}.small-btn{padding:10px 16px}
+.activity-complete{margin-top:18px;padding:20px;border-radius:15px;background:#e8f7f1;border:1px solid #b6ddcf}.activity-complete p{margin-top:6px}
+@media(max-width:700px){.activity-step{grid-template-columns:1fr}.step-number{width:auto;height:auto;display:inline-block;padding:7px 10px;border-radius:999px}.activity-options,.safety-checks{grid-template-columns:1fr}.wrong-recipient-activity{padding:20px}}
+
+
+
+/* Professional motion system: subtle, purposeful and accessible */
+:root{--motion-fast:180ms;--motion-normal:520ms;--motion-slow:850ms;--ease-out:cubic-bezier(.2,.75,.2,1)}
+.hero{background-size:140% 140%;animation:heroShift 14s ease-in-out infinite alternate}
+@keyframes heroShift{0%{background-position:0% 30%}100%{background-position:100% 65%}}
+
+/* Scroll reveal. JavaScript adds .reveal-ready and .is-visible. */
+.reveal-ready{opacity:0;transform:translateY(24px);transition:opacity var(--motion-normal) var(--ease-out),transform var(--motion-normal) var(--ease-out)}
+.reveal-ready.is-visible{opacity:1;transform:none}
+.reveal-ready.reveal-left{transform:translateX(-26px)}
+.reveal-ready.reveal-right{transform:translateX(26px)}
+.reveal-ready.reveal-left.is-visible,.reveal-ready.reveal-right.is-visible{transform:none}
+
+/* Cards respond like a professional dashboard, not a game. */
+.role-grid article,.control-grid article,.scenario,.panel,.kpi-grid article,.bia-grid article,.action-grid article,.heatmap-card,.priority-card,.matrix-card,.flow-card,.comparison-card,.procedure-card,.incident,.case-facts,.case-relevance,.wrong-recipient-activity{
+ transition:transform var(--motion-fast) ease,box-shadow var(--motion-fast) ease,border-color var(--motion-fast) ease
+}
+.role-grid article:hover,.control-grid article:hover,.scenario:hover,.kpi-grid article:hover,.bia-grid article:hover,.action-grid article:hover,.heatmap-card:hover,.priority-card:hover,.matrix-card:hover,.flow-card:hover,.comparison-card:hover,.case-facts:hover,.case-relevance:hover{
+ transform:translateY(-4px);box-shadow:0 18px 42px rgba(8,30,50,.12);border-color:#b8ccdc
+}
+
+/* Active navigation communicates progress through the briefing. */
+.nav-links a{position:relative;transition:color var(--motion-fast) ease}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:#77e3d2;transform:scaleX(0);transform-origin:left;transition:transform var(--motion-fast) ease}
+.nav-links a.active-section{color:#fff}
+.nav-links a.active-section::after{transform:scaleX(1)}
+
+/* Numbers count in once when their section becomes visible. */
+.counting{font-variant-numeric:tabular-nums;min-width:2ch;display:inline-block}
+
+/* Explain process order visually when a workflow enters the viewport. */
+.workflow article,.response-grid article{position:relative;overflow:hidden}
+.workflow article::after,.response-grid article::after{content:"";position:absolute;inset:auto 0 0;height:3px;background:linear-gradient(90deg,var(--cyan),#77e3d2);transform:scaleX(0);transform-origin:left}
+.workflow.sequence-active article::after,.response-grid.sequence-active article::after{animation:processLine .6s var(--ease-out) forwards}
+.workflow.sequence-active article:nth-child(2)::after,.response-grid.sequence-active article:nth-child(2)::after{animation-delay:.12s}
+.workflow.sequence-active article:nth-child(3)::after,.response-grid.sequence-active article:nth-child(3)::after{animation-delay:.24s}
+.workflow.sequence-active article:nth-child(4)::after,.response-grid.sequence-active article:nth-child(4)::after{animation-delay:.36s}
+@keyframes processLine{to{transform:scaleX(1)}}
+
+/* Heat-map risks enter with a restrained pulse to direct attention. */
+.heat-grid .cell b{transform:scale(.82);opacity:0}
+.heatmap.is-visible .cell b{animation:riskPop .42s var(--ease-out) forwards}
+.heatmap.is-visible .cell:nth-child(14) b{animation-delay:.08s}
+.heatmap.is-visible .cell:nth-child(19) b:first-child{animation-delay:.16s}
+.heatmap.is-visible .cell:nth-child(19) b:last-child{animation-delay:.24s}
+@keyframes riskPop{to{transform:scale(1);opacity:1}}
+
+/* Activity completion feels clear without celebratory distraction. */
+.activity-complete:not([hidden]){animation:completionIn .5s var(--ease-out)}
+@keyframes completionIn{0%{opacity:0;transform:translateY(10px) scale(.985)}100%{opacity:1;transform:none}}
+
+/* Buttons and interactive controls get clear feedback. */
+.btn,.clue-row button,.scenario button,.activity-options button,.role-tabs button,.fake-link{transition:transform var(--motion-fast) ease,box-shadow var(--motion-fast) ease,background-color var(--motion-fast) ease,border-color var(--motion-fast) ease}
+.btn:hover,.fake-link:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(8,30,50,.18)}
+.btn:active,.fake-link:active,.clue-row button:active,.scenario button:active,.activity-options button:active{transform:translateY(0) scale(.985)}
+
+/* Section headings receive a short accent sweep. */
+.section-head h2{position:relative}
+.section-head h2::after{content:"";display:block;width:54px;height:3px;margin-top:14px;border-radius:99px;background:linear-gradient(90deg,var(--cyan),var(--blue));transform:scaleX(0);transform-origin:left;transition:transform .65s var(--ease-out)}
+.section-head.is-visible h2::after{transform:scaleX(1)}
+
+/* Respect user accessibility preferences. */
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+ .reveal-ready{opacity:1!important;transform:none!important}
+ .heat-grid .cell b{opacity:1!important;transform:none!important}
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="topbar" id="top">
+<div class="shell nav-wrap">
+<a aria-label="CarePoint CyberSafe home" class="brand" href="#home"><span class="brand-icon">+</span><span><b>CarePoint</b><small>CyberSafe Portal</small></span></a>
+<button aria-controls="navLinks" aria-expanded="false" class="menu-btn" id="menuBtn">Menu</button>
+<nav aria-label="Primary navigation" class="nav-links" id="navLinks">
+<a href="#clinic">Clinic context</a>
+<a href="#dashboard">Dashboard</a>
+<a href="#topic1">Topic 1</a>
+<a href="#topic2">Topic 2</a>
+<a href="#roadmap">Roadmap</a>
+<a href="#response">Report</a>
+<a href="#scenarios">Scenarios</a>
+<a href="#quiz">Knowledge check</a>
+</nav>
+</div>
+<div aria-hidden="true" class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+</header>
+<main id="main">
+<section class="hero" id="home">
+<div class="shell hero-grid">
+<div>
+<p class="kicker">Internal staff briefing | CarePoint Medical Clinic</p>
+<h1>Protect patient care from one rushed click and one mishandled record.</h1>
+<p class="lead">This portal prepares CarePoint staff for the two human decisions most relevant to the clinic: recognising healthcare phishing and preventing patient data breaches.</p>
+<div class="hero-actions"><a class="btn primary" href="#clinic">Begin briefing</a><button class="btn secondary" id="resumeBtn" type="button">Resume last section</button></div>
+<div aria-label="Australian healthcare cyber evidence" class="evidence-strip">
+<article><strong>225</strong><span>health service breach notifications in Australia during 2025</span></article>
+<article><strong>95%</strong><span>success rate in healthcare incidents to which ASD responded in 2024 to 2025</span></article>
+<article><strong>30 days</strong><span>expected maximum assessment period for a suspected eligible data breach</span></article>
+</div>
+<p class="source-note">Sources: OAIC (2026a, 2026b); ASD (2025).</p>
+</div>
+<aside aria-label="Training scope" class="hero-card">
+<p class="status"><span></span> Focused operational training</p>
+<h2>Two topics only</h2>
+<ol>
+<li><b>Healthcare phishing and social engineering</b></li>
+<li><b>Preventing patient data breaches</b></li>
+</ol>
+<p>Every procedure, example and activity supports these two topics.</p>
+<div class="time-badge">Designed for a 12 to 15 minute review</div>
+</aside>
+</div>
+</section>
+<section class="section light" id="clinic">
+<div class="shell">
+<div class="section-head"><p class="kicker">CarePoint operating context</p><h2>Security decisions occur inside ordinary clinical work.</h2><p>CarePoint is a fictional 20 person general practice in Dandenong. Staff receive referrals and pathology notifications, book appointments, access clinical records and My Health Record, process Medicare claims, and communicate with patients and providers.</p></div>
+<div class="role-grid">
+<article><span>Reception</span><h3>High message volume</h3><p>Handles external referrals, appointment changes, patient emails and pathology notifications.</p></article>
+<article><span>Clinicians</span><h3>Sensitive clinical access</h3><p>Use medication, allergy, pathology and consultation information to make care decisions.</p></article>
+<article><span>Administration</span><h3>Trusted financial workflows</h3><p>Processes Medicare, payroll, supplier invoices and account changes.</p></article>
+</div>
+<div class="crown-panel">
+<div><p class="mini-label">Priority asset</p><h3>Clinical and appointment system</h3><p>If this system or its associated accounts are compromised, CarePoint may lose access to patient identity, allergies, medications, appointments and clinical history.</p></div>
+<div class="connection"><span>Phishing</span><b>can steal access to</b><span>patient information</span></div>
+</div>
+<div aria-label="CarePoint priority risk matrix" class="matrix-card">
+<div class="section-mini"><p class="mini-label">Focused risk assessment</p><h3>Why these two topics receive priority</h3><p>The matrix is limited to behaviours that directly support healthcare phishing prevention and protection of patient information.</p></div>
+<div class="table-wrap"><table class="risk-table">
+<thead><tr><th>CarePoint risk</th><th>Likelihood</th><th>Impact</th><th>Priority</th><th>Primary response</th></tr></thead>
+<tbody>
+<tr><td>Healthcare phishing steals a staff account</td><td><span class="rating high">High</span></td><td><span class="rating high">High</span></td><td><b>Critical</b></td><td>CP-CS-01 verification and immediate reporting</td></tr>
+<tr><td>Patient information sent to the wrong recipient</td><td><span class="rating high">High</span></td><td><span class="rating high">High</span></td><td><b>Critical</b></td><td>CP-CS-02 two-check rule and immediate reporting</td></tr>
+<tr><td>Shared or compromised account exposes records</td><td><span class="rating medium">Medium</span></td><td><span class="rating high">High</span></td><td><b>High</b></td><td>Individual accounts, unique passphrases and MFA</td></tr>
+<tr><td>Visible screen or uncollected printing exposes data</td><td><span class="rating medium">Medium</span></td><td><span class="rating medium">Medium</span></td><td><b>Medium</b></td><td>Screen locking, secure printing and disposal</td></tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</section>
+<section class="section dashboard-section" id="dashboard">
+<div class="shell">
+<div class="section-head"><p class="kicker">Executive dashboard</p><h2>CarePoint's two priority risks at a glance.</h2><p>This management view translates the training into risk ownership, operational impact and measurable action. Values marked "training baseline" are fictional targets created for this artefact.</p></div>
+<div aria-label="Illustrative CarePoint security metrics" class="kpi-grid">
+<article><span class="kpi-label">MFA coverage</span><strong>75%</strong><p>Training baseline; target 100% for priority systems.</p></article>
+<article><span class="kpi-label">Staff completion</span><strong>100%</strong><p>Required for all 20 staff at induction and every six months.</p></article>
+<article><span class="kpi-label">Pre-click reports</span><strong>≥80%</strong><p>Target for healthcare-themed phishing simulations.</p></article>
+<article><span class="kpi-label">Report time</span><strong>&lt;10 min</strong><p>Target median from discovery to internal escalation.</p></article>
+</div>
+<div class="dashboard-grid">
+<article class="heatmap-card">
+<div class="section-mini"><p class="mini-label">5 × 5 risk heat map</p><h3>Inherent risk before additional treatment</h3></div>
+<div aria-label="Risk heat map. Phishing credential theft and wrong recipient email are high likelihood and high impact. Shared accounts are medium likelihood and high impact. Visible screens are medium likelihood and medium impact." class="heatmap" role="img">
+<div class="axis-y">Impact</div>
+<div class="heat-grid">
+<span class="cell l1"></span><span class="cell l2"></span><span class="cell l3"></span><span class="cell l4"></span><span class="cell l5"></span>
+<span class="cell l1"></span><span class="cell l2"></span><span class="cell l3"></span><span class="cell l4"><b>R3</b></span><span class="cell l5"></span>
+<span class="cell l1"></span><span class="cell l2"></span><span class="cell l3"><b>R4</b></span><span class="cell l4"></span><span class="cell l5"></span>
+<span class="cell l1"></span><span class="cell l2"></span><span class="cell l3"></span><span class="cell l4"><b>R1</b><b>R2</b></span><span class="cell l5"></span>
+<span class="cell l1"></span><span class="cell l2"></span><span class="cell l3"></span><span class="cell l4"></span><span class="cell l5"></span>
+</div>
+<div class="axis-x">Likelihood →</div>
+</div>
+<div class="risk-key"><span><b>R1</b> Phishing account theft</span><span><b>R2</b> Wrong-recipient disclosure</span><span><b>R3</b> Shared/compromised account</span><span><b>R4</b> Screen or print exposure</span></div>
+</article>
+<article class="priority-card">
+<p class="mini-label">Management priorities</p><h3>Top three decisions</h3>
+<ol class="priority-list"><li><b>Complete MFA coverage</b><span>Remove the largest avoidable credential gap on priority systems.</span></li><li><b>Standardise independent verification</b><span>Make CP-CS-01 the normal response to unexpected clinical, identity and payment requests.</span></li><li><b>Measure behaviour, not attendance</b><span>Track pre-click reports, reporting speed and repeat disclosure errors.</span></li></ol>
+<div class="maturity"><span>Illustrative maturity</span><b>2.5 / 5</b><div><i style="width:50%"></i></div><small>Defined controls exist, but coverage and behavioural assurance remain incomplete.</small></div>
+</article>
+</div>
+</div>
+</section>
+<section class="section dark" id="topic1">
+<div class="shell">
+<div class="section-head"><p class="kicker">Topic 1</p><h2>Healthcare phishing and social engineering</h2><p>At CarePoint, attackers do not need to invent an unfamiliar story. They can imitate the pathology laboratories, specialists, patients, software vendors and government services that staff communicate with every day.</p><p class="source-note">Phishing uses deceptive messages to obtain information, money or account access (Australian Cyber Security Centre, 2026).</p></div>
+<div class="threat-panel">
+<p class="mini-label">Sector threat picture, FY2024 to 2025</p>
+<div class="threat-rows">
+<div><b>60%</b><span>of incidents reported to ASD’s ACSC involved phishing (ASD, 2025)</span></div>
+<div><b>95%</b><span>attacker success rate in health sector incidents ASD responded to, against 52% across all sectors (ASD, 2025)</span></div>
+<div><b>37%</b><span>of Australian notified breaches in January to June 2025 resulted from human error (OAIC, 2025a)</span></div>
+<div><b>225</b><span>of 1,205 breaches notified in 2025 came from health providers, the most of any sector (OAIC, 2026a)</span></div>
+</div>
+<p class="threat-read">Assessment: CarePoint sits in the most targeted sector, and the technique most often used against it is the one that depends on staff judgement rather than technology. Independent testing supports this: healthcare is more susceptible to phishing than any other major industry, with about 41.9% of organisations shown to be vulnerable in simulation testing, ahead of insurance and retail (KnowBe4, 2025). Phishing is also a leading initial route into healthcare data breaches, accounting for roughly one in six confirmed breaches (HIPAA Journal, 2025).</p>
+</div>
+<div class="procedure-card">
+<div class="procedure-code">CP-CS-01</div>
+<div><h3>External Clinical Message Verification Procedure</h3><p>Before opening an unexpected attachment, following a login link, disclosing patient information, approving a payment change or sharing an MFA code, staff must verify the request through an independently obtained contact channel.</p></div>
+</div>
+<div class="two-col">
+<article class="panel">
+<p class="mini-label">Common CarePoint lures</p>
+<ul class="icon-list">
+<li><b>Pathology result:</b> urgent abnormal result requiring portal login</li>
+<li><b>Specialist referral:</b> password protected attachment with a fake sign-in page</li>
+<li><b>Medicare request:</b> claim or provider details requiring immediate confirmation</li>
+<li><b>Supplier invoice:</b> changed bank account details sent from a lookalike domain</li>
+<li><b>IT support call:</b> caller asks for a password, MFA code or remote access</li>
+</ul>
+</article>
+<article class="panel email-lab">
+<div class="email-top"><span class="avatar">M</span><div><b>MetroPath Results</b><small>results@metropath-secure.example</small></div><span class="tag danger">Investigate</span></div>
+<p><b>Subject:</b> URGENT abnormal result, action required</p>
+<p>A result for patient R. Patel could not be delivered. Sign in within 30 minutes to avoid a clinical delay.</p>
+<button class="fake-link" data-clue="link" type="button">Open secure result</button>
+<div class="clue-row">
+<button data-clue="sender" type="button">Inspect sender</button>
+<button data-clue="urgency" type="button">Inspect wording</button>
+<button data-clue="request" type="button">Inspect request</button>
+</div>
+<p aria-live="polite" class="feedback" id="clueFeedback">Select an item to investigate the message.</p>
+</article>
+</div>
+<div class="workflow">
+<article><span>1</span><h3>Pause</h3><p>Do not let clinical urgency decide for you.</p></article>
+<article><span>2</span><h3>Inspect</h3><p>Check the full sender, link destination, wording and requested action.</p></article>
+<article><span>3</span><h3>Verify</h3><p>Use CarePoint's approved provider directory or a known internal contact.</p></article>
+<article><span>4</span><h3>Report</h3><p>Forward as an attachment or capture the details, then notify the Practice Manager.</p></article>
+</div>
+<div class="visual-learning">
+<article class="flow-card">
+<p class="mini-label">Topic 1 decision path</p><h3>Unexpected healthcare message</h3>
+<div class="flow-line"><span>Email, SMS, QR code or call arrives</span><i>↓</i><span>Pause and inspect</span><i>↓</i><span>Verify through an independent channel</span></div>
+<div class="branch"><div><b>Verified genuine</b><span>Continue through the saved portal or normal workflow</span></div><div><b>Not verified or suspicious</b><span>Do not interact; preserve details and report immediately</span></div></div>
+</article>
+<article class="comparison-card">
+<p class="mini-label">Fast comparison</p><h3>Suspicious versus expected communication</h3>
+<div class="table-wrap"><table class="compare-table"><thead><tr><th>Suspicious message</th><th>Expected communication</th></tr></thead><tbody>
+<tr><td>Unexpected urgency or threat of delay</td><td>Fits an anticipated clinical workflow</td></tr>
+<tr><td>Lookalike or unfamiliar sender address</td><td>Matches the approved provider directory</td></tr>
+<tr><td>Requests a password, MFA code or payment change</td><td>Does not request authentication secrets</td></tr>
+<tr><td>Directs staff to an email login link</td><td>Uses the saved portal or known system address</td></tr>
+</tbody></table></div>
+</article>
+</div>
+<div class="incident">
+<div><p class="mini-label">Simulated CarePoint near miss | CP-2026-004</p><h3>Fake pathology portal</h3></div>
+<div class="incident-grid">
+<p><b>Trigger:</b> Reception received an urgent pathology notification shortly before closing.</p>
+<p><b>Why it nearly worked:</b> The sender used a familiar display name and created concern about delaying patient care.</p>
+<p><b>Safe response:</b> The receptionist used the approved laboratory phone number and confirmed that no message had been sent.</p>
+<p><b>Lesson:</b> Verification protects care. It does not delay care.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section light" id="case">
+<div class="shell">
+<div class="section-head"><p class="kicker">Case reference</p><h2>MediSecure, April 2024: the clinic does not have to be the one that is hacked.</h2></div>
+<div class="case-panel">
+<div class="case-facts">
+<p class="mini-label">Incident summary</p>
+<ul class="icon-list">
+<li><b>Entity:</b> MediSecure, a national e-prescription delivery service used by general practices and pharmacies.</li>
+<li><b>Event:</b> ransomware and data exfiltration, April 2024. Approximately 6.5 terabytes taken, covering prescriptions issued between March 2019 and November 2023.</li>
+<li><b>Scale:</b> approximately 12.9 million individuals affected, close to half the Australian population.</li>
+<li><b>Data exposed:</b> healthcare identifiers, Medicare card numbers, medication names, strengths, quantities and the reason each medicine was prescribed.</li>
+<li><b>Outcome:</b> data offered for sale on a criminal forum. The company entered voluntary administration.</li>
+</ul>
+<p class="source-note">Department of Home Affairs (n.d.); ASD (2025).</p>
+</div>
+<div class="case-relevance">
+<p class="mini-label">Why this matters at CarePoint</p>
+<p><b>1. The failure was at a supplier.</b> No control inside the clinic would have prevented this exposure. Practices were affected through a service they were required to trust.</p>
+<p><b>2. It makes phishing against us more convincing.</b> An attacker holding real prescription histories can name a real patient and a real medication. This is why CP-CS-01 verifies the channel rather than asking staff to judge whether the content looks plausible. Plausibility has stopped being a reliable test.</p>
+<p><b>3. It links both CarePoint topics.</b> A supplier breach becomes our phishing problem, and our phishing problem becomes a patient data breach. The two procedures are one chain, not two subjects.</p>
+<div class="lesson-box"><b>CarePoint lesson</b><span>Real patient details can make a fraudulent message look convincing. Staff must verify the communication channel, not rely on how plausible the content appears.</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section light" id="topic2">
+<div class="shell">
+<div class="section-head"><p class="kicker">Topic 2</p><h2>Preventing patient data breaches</h2><p>A patient data breach is not limited to a hacker stealing a database. It can occur when information is emailed to the wrong person, accessed without a care purpose, left visible, discussed inappropriately, lost on a device or exposed through a compromised account.</p><p class="source-note">Human error caused 37% of breaches notified between January and June 2025, up from 29% in the previous period. Sending personal information to the wrong recipient was the single largest human error cause at 44% (OAIC, 2025a).</p></div>
+<div class="threat-panel light-panel">
+<p class="mini-label">What a health record breach costs and why patient data is targeted</p>
+<div class="threat-rows">
+<div><b>$408</b><span>average cost per breached healthcare record, about three times the cross industry average (IBM, 2024)</span></div>
+<div><b>up to $1,000</b><span>value of a complete medical record on criminal markets, far above a stolen card number (Cobalt, 2025)</span></div>
+<div><b>1 in 5</b><span>breaches now begin with stolen or compromised credentials, the largest single access route (Verizon, 2025)</span></div>
+</div>
+<p class="threat-read">These figures explain why CarePoint treats patient records as its highest value asset. The financial and personal harm of a health record breach is disproportionately high, and stolen staff credentials are the most common way in, which is why Topic 1 and Topic 2 are treated as one chain.</p>
+</div>
+<div class="procedure-card blue">
+<div class="procedure-code">CP-CS-02</div>
+<div><h3>Minimum Necessary Patient Information Procedure</h3><p>Staff must access, use and disclose only the patient information required for an authorised CarePoint task. Identity, recipient, access authority and transmission method must be checked before information is viewed or sent.</p></div>
+</div>
+<div class="control-grid">
+<article><span>Before access</span><h3>Confirm authority and purpose</h3><p>Use an individual account. Access a record only when needed for the patient's care or an authorised administrative task.</p></article>
+<article><span>Before sending</span><h3>Use the two check rule</h3><p>Confirm patient identity and recipient details. Recheck autocomplete, attachments and visible information.</p></article>
+<article><span>During use</span><h3>Keep information private</h3><p>Lock screens, position monitors carefully, avoid shared accounts and collect printing immediately.</p></article>
+<article><span>After use</span><h3>Close and dispose securely</h3><p>Close records, sign out where required and place paper in approved confidential disposal.</p></article>
+<article><span>Account protection</span><h3>Use strong authentication</h3><p>Use a unique passphrase and MFA. Never approve an unexpected MFA prompt or share a code.</p></article>
+<article><span>My Health Record</span><h3>Follow access obligations</h3><p>CarePoint must maintain authorised user access, training, identifiable user accounts and a process for actual or potential breaches.</p></article>
+</div>
+<p class="source-note">My Health Record participating organisations must maintain and communicate a security and access policy, manage user accounts, train authorised users and respond to potential or actual breaches (Australian Digital Health Agency, 2026a, 2026b).</p>
+<div class="flow-card patient-flow">
+<p class="mini-label">Topic 2 decision path</p><h3>Safe patient information handling</h3>
+<div class="flow-line horizontal"><span>Confirm authorised purpose</span><i>→</i><span>Access minimum necessary data</span><i>→</i><span>Check identity, recipient and attachment</span><i>→</i><span>Use secure channel</span><i>→</i><span>Close, lock or dispose securely</span></div>
+<p class="flow-alert"><b>If information may have been exposed:</b> stop, preserve facts and report immediately. Do not wait for confirmation.</p>
+</div>
+<div class="wrong-recipient-activity" id="wrongRecipientActivity">
+<div class="activity-intro">
+<p class="mini-label">Interactive CarePoint scenario</p>
+<h3>Wrong recipient email</h3>
+<p>Receptionist Sarah is preparing a specialist referral for patient Anita Rao. Outlook autocomplete selects <b>anitha.rao@email.example</b>, which belongs to another person with a similar name. The draft contains a referral, pathology results and a Medicare number.</p>
+</div>
+
+<section class="activity-step active" id="recipientStep1" aria-labelledby="recipientStep1Title">
+<div class="step-number">Step 1</div>
+<div>
+<h4 id="recipientStep1Title">What should Sarah do first?</h4>
+<div class="activity-options">
+<button type="button" data-recipient-first="wrong">Send it because Outlook selected the address.</button>
+<button type="button" data-recipient-first="right">Verify the recipient using CarePoint's patient record before sending.</button>
+<button type="button" data-recipient-first="wrong">Ask another patient whether the address looks correct.</button>
+<button type="button" data-recipient-first="wrong">Remove the attachment and send the email first.</button>
+</div>
+<p class="activity-feedback" id="recipientFirstFeedback" aria-live="polite">Choose the safest first action.</p>
+</div>
+</section>
+
+<section class="activity-step locked" id="recipientStep2" aria-labelledby="recipientStep2Title" aria-disabled="true">
+<div class="step-number">Step 2</div>
+<div>
+<h4 id="recipientStep2Title">Complete the final safety checks</h4>
+<p>Select every action required by CP-CS-02 before patient information is sent.</p>
+<div class="safety-checks">
+<label><input type="checkbox" value="recipient"> Confirm the intended recipient from the patient record.</label>
+<label><input type="checkbox" value="attachments"> Open and confirm every attachment.</label>
+<label><input type="checkbox" value="minimum"> Include only the minimum necessary patient information.</label>
+<label><input type="checkbox" value="autocomplete"> Recheck the address after autocomplete.</label>
+</div>
+<button class="btn primary small-btn" id="checkRecipientSafety" type="button">Check safety steps</button>
+<p class="activity-feedback" id="recipientSafetyFeedback" aria-live="polite">Complete Step 1 to unlock this check.</p>
+</div>
+</section>
+
+<section class="activity-step locked" id="recipientStep3" aria-labelledby="recipientStep3Title" aria-disabled="true">
+<div class="step-number">Step 3</div>
+<div>
+<h4 id="recipientStep3Title">The email was already sent to the wrong person. What happens now?</h4>
+<div class="activity-options">
+<button type="button" data-recipient-sent="wrong">Delete it from Sent Items and continue working.</button>
+<button type="button" data-recipient-sent="wrong">Wait to see whether the recipient opens it.</button>
+<button type="button" data-recipient-sent="right">Report immediately, preserve the message details and follow CarePoint's incident process.</button>
+<button type="button" data-recipient-sent="wrong">Send a correction and do not tell the Practice Manager.</button>
+</div>
+<p class="activity-feedback" id="recipientSentFeedback" aria-live="polite">Complete Step 2 to unlock this decision.</p>
+</div>
+</section>
+
+<div class="activity-complete" id="recipientComplete" hidden>
+<p class="mini-label">Scenario completed</p>
+<h4>CarePoint safe sending rule</h4>
+<p>Verify the recipient independently, check every attachment, disclose only the minimum necessary information and report any suspected mistake immediately. Autocomplete is a convenience, not an identity check.</p>
+<button class="btn secondary" id="resetRecipientActivity" type="button">Repeat scenario</button>
+</div>
+</div>
+<div class="critical-note">
+<h3>My Health Record requires immediate internal escalation</h3>
+<p>A potential or actual breach related to My Health Record must be reported to the Australian Digital Health Agency as soon as possible, even when it has not yet been confirmed or has already been contained. Other incidents may also require assessment under the Privacy Act Notifiable Data Breaches scheme.</p>
+<p class="source-note">Australian Digital Health Agency (2026a); OAIC (2026b).</p>
+</div>
+</div>
+</section>
+<section class="section navy" id="response">
+<div class="shell">
+<div class="section-head"><p class="kicker">CarePoint response procedure</p><h2>Report early. Preserve facts. Do not investigate alone.</h2><p>This procedure applies to both selected topics: a suspicious message and any actual or suspected exposure of patient information.</p></div>
+<div class="response-grid">
+<article><span>01</span><h3>Stop</h3><p>Stop clicking, sending, replying or approving. Do not delete evidence.</p></article>
+<article><span>02</span><h3>Contain safely</h3><p>Disconnect only when instructed, lock the device and avoid further access.</p></article>
+<article><span>03</span><h3>Report immediately</h3><p>Contact Practice Manager Dr Maya Aziz using the fictional training contact below.</p></article>
+<article><span>04</span><h3>Record facts</h3><p>Record time, system, sender or recipient, information involved and actions already taken.</p></article>
+</div>
+<div class="contact-card"><div><p class="mini-label">Internal escalation</p><h3>Dr Maya Aziz, Practice Manager</h3><p>03 9000 7610 | security@carepoint.example</p></div><button class="btn primary" onclick="window.print()" type="button">Print response card</button></div>
+<div class="legal-flow"><div><b>CarePoint receives report</b><span>Immediate internal escalation</span></div><i>→</i><div><b>Contain and assess</b><span>Take reasonable steps to complete an NDB assessment within 30 calendar days</span></div><i>→</i><div><b>Notify when required</b><span>OAIC, affected people and Australian Digital Health Agency where applicable</span></div></div>
+<p class="source-note">OAIC (2026b); Australian Digital Health Agency (2026a).</p>
+</div>
+</section>
+<section class="section light" id="scenarios">
+<div class="shell">
+<div class="section-head"><p class="kicker">Practice decisions</p><h2>Choose the safest CarePoint action.</h2></div>
+<div class="scenario-grid">
+<article class="scenario" data-answer="b">
+<p class="mini-label">Scenario 1 | Phishing</p><h3>An IT caller asks for your MFA code to fix email.</h3>
+<button data-choice="a">Provide it because the caller knows your name</button>
+<button data-choice="b">End the call and contact the approved IT provider</button>
+<button data-choice="c">Approve the MFA prompt but do not provide the code</button>
+<p aria-live="polite" class="scenario-feedback"></p>
+</article>
+<article class="scenario" data-answer="c">
+<p class="mini-label">Scenario 2 | Patient data</p><h3>You sent a referral to the wrong email address.</h3>
+<button data-choice="a">Recall it and wait to see whether recall succeeds</button>
+<button data-choice="b">Delete the sent message and resend it correctly</button>
+<button data-choice="c">Report immediately and preserve the message details</button>
+<p aria-live="polite" class="scenario-feedback"></p>
+</article>
+<article class="scenario" data-answer="a">
+<p class="mini-label">Scenario 3 | Combined risk</p><h3>A fake pathology login page accepted your password.</h3>
+<button data-choice="a">Report immediately and follow account containment instructions</button>
+<button data-choice="b">Change the password at the end of the shift</button>
+<button data-choice="c">Wait for evidence that the account has been accessed</button>
+<p aria-live="polite" class="scenario-feedback"></p>
+</article>
+</div>
+</div>
+</section>
+<section class="section light" id="roles">
+<div class="shell">
+<div class="section-head"><p class="kicker">Role-based application</p><h2>The same risk requires different daily decisions.</h2><p>Each role receives only the actions it can realistically perform, reducing unnecessary friction during patient care.</p></div>
+<div aria-label="CarePoint role guidance" class="role-tabs" role="tablist">
+<button aria-controls="rolePanel" aria-selected="true" data-role="reception" role="tab">Reception</button>
+<button aria-controls="rolePanel" aria-selected="false" data-role="clinician" role="tab">Clinicians</button>
+<button aria-controls="rolePanel" aria-selected="false" data-role="admin" role="tab">Administration</button>
+<button aria-controls="rolePanel" aria-selected="false" data-role="manager" role="tab">Practice Manager</button>
+</div>
+<article aria-live="polite" class="role-panel" id="rolePanel" tabindex="0"></article>
+</div>
+</section>
+<section class="section roadmap-section" id="roadmap">
+<div class="shell">
+<div class="section-head"><p class="kicker">Business impact and implementation</p><h2>Protect care first, then improve control maturity.</h2><p>The plan prioritises changes that reduce clinical disruption and can be delivered by a small practice without a dedicated security team.</p></div>
+<div class="bia-grid">
+<article><span>Clinical records</span><h3>Unsafe or delayed treatment</h3><p>Loss of allergies, medications, results or history can interrupt clinical decisions and continuity of care.</p><b>Priority: Critical</b></article>
+<article><span>Appointments</span><h3>Operational interruption</h3><p>Staff may not know who is attending, why they are attending or how to contact them.</p><b>Priority: High</b></article>
+<article><span>Medicare workflows</span><h3>Cash-flow and compliance impact</h3><p>Claims may be delayed, altered or redirected, affecting revenue and administrative workload.</p><b>Priority: High</b></article>
+<article><span>Staff email</span><h3>Trusted channel becomes a threat</h3><p>A compromised account can distribute convincing internal phishing and expose patient communications.</p><b>Priority: High</b></article>
+</div>
+<div aria-label="CarePoint 90 day cyber improvement roadmap" class="timeline">
+<article><span>Days 1–30</span><h3>Close immediate gaps</h3><ul><li>Confirm named incident owner and backup.</li><li>Enable MFA on remaining priority systems.</li><li>Publish CP-CS-01 and CP-CS-02 quick guides.</li></ul></article>
+<article><span>Days 31–60</span><h3>Test behaviour</h3><ul><li>Run one healthcare-themed phishing simulation.</li><li>Audit shared accounts and remove unnecessary access.</li><li>Review wrong-recipient safeguards and secure printing.</li></ul></article>
+<article><span>Days 61–90</span><h3>Measure and improve</h3><ul><li>Review report rate, report time and repeat errors.</li><li>Run a 30-minute breach-response tabletop exercise.</li><li>Assign owners and dates to remaining treatment actions.</li></ul></article>
+</div>
+<div class="controls-table table-wrap"><table><thead><tr><th>Control</th><th>Strength</th><th>Limitation</th><th>CarePoint decision</th></tr></thead><tbody>
+<tr><td>MFA</td><td>Reduces misuse of stolen passwords</td><td>Can still be defeated by prompt approval or session theft</td><td>Mandatory on priority systems plus staff verification</td></tr>
+<tr><td>Email filtering</td><td>Blocks many known malicious messages</td><td>Cannot reliably detect every trusted-looking lure</td><td>Retain as a first layer, not the final decision</td></tr>
+<tr><td>Awareness scenarios</td><td>Builds recognition and reporting habits</td><td>Knowledge fades and training can be ignored</td><td>Short role-based refreshers every six months</td></tr>
+<tr><td>Least privilege</td><td>Limits the information exposed by one account</td><td>Requires ongoing access review</td><td>Quarterly review by the Practice Manager and IT provider</td></tr>
+</tbody></table></div>
+</div>
+</section>
+<section class="section navy" id="rationale">
+<div class="shell">
+<div class="section-head"><p class="kicker">Control rationale</p><h2>Why CarePoint trains this way, and what it costs.</h2><p>These procedures were designed against the published evidence on security awareness, not against an assumption that information alone changes behaviour.</p></div>
+<div class="two-col">
+<div class="panel">
+<h3>What the evidence says</h3>
+<p>The research does not point one way. Chen et al. (2024) found that group discussion and role playing improved self efficacy, support seeking and phishing reporting. Lain et al. (2024) reached a less comfortable conclusion from a large field study: embedded training material is largely ignored, and the benefit that remains works mainly as a reminder rather than as instruction. Reinheimer et al. (2020) add the timing dimension, showing that awareness decays and that when reminders arrive matters more than how thorough the original session was.</p>
+<p>Read together, these findings argue against a single annual course. CarePoint therefore uses short role based scenarios, deliberate repetition every six months, a named reporting route, behavioural measurement and technical controls that do not rely on staff memory.</p>
+</div>
+<div class="panel">
+<h3>The trade off</h3>
+<p>Security controls must protect CarePoint without making normal patient care unnecessarily difficult. For example, independently checking an unusual pathology message or payment request takes extra time, but that short check can prevent stolen credentials, fraud or the disclosure of patient information. Controls that are too complicated are more likely to be skipped by busy staff, so usability is part of security rather than an optional extra.</p>
+<p>CarePoint therefore applies stronger verification to higher-risk requests involving passwords, MFA codes, payments, identity details or patient information, rather than treating every routine email in the same way. This approach does not remove every risk, but it gives staff a realistic process they can follow during a busy clinic day while still protecting patient trust and continuity of care.</p>
+<p class="critical-conclusion"><b>Critical conclusion:</b> awareness cannot eliminate phishing or patient data breaches by itself. It must operate with email filtering, individual access controls, MFA, secure systems, logging and management response. Training prepares staff to make the correct decision when technical controls do not stop the incident.</p>
+</div>
+</div>
+<div class="measure-strip">
+<p class="mini-label">How CarePoint will know whether this worked</p>
+<div>
+<span>Reporting rate for simulated healthcare phishing, before any click</span>
+<span>Median time from discovery to report</span>
+<span>Repeat error rate for wrong recipient email</span>
+<span>Percentage of staff with individual accounts and MFA on priority systems</span>
+</div>
+<p class="threat-read">Completion rates are not a measure of behaviour. These four indicators are reviewed every six months.</p>
+</div>
+</div>
+</section>
+<section class="section dark" id="quiz">
+<div class="shell narrow">
+<div class="section-head"><p class="kicker">Final knowledge check</p><h2>Can you apply both procedures?</h2></div>
+<form class="quiz-form" id="quizForm">
+<fieldset><legend>1. What is the safest way to verify an unexpected pathology message?</legend><label><input name="q1" type="radio" value="a"/> Reply to the sender</label><label><input name="q1" type="radio" value="b"/> Use the approved provider directory</label><label><input name="q1" type="radio" value="c"/> Open the portal in private mode</label></fieldset>
+<fieldset><legend>2. What should you do with an unexpected MFA prompt?</legend><label><input name="q2" type="radio" value="a"/> Approve it once</label><label><input name="q2" type="radio" value="b"/> Ignore it without reporting</label><label><input name="q2" type="radio" value="c"/> Deny it and report it</label></fieldset>
+<fieldset><legend>3. Which is a possible patient data breach?</legend><label><input name="q3" type="radio" value="a"/> Emailing a referral to the wrong recipient</label><label><input name="q3" type="radio" value="b"/> Closing a record after use</label><label><input name="q3" type="radio" value="c"/> Verifying a provider by phone</label></fieldset>
+<fieldset><legend>4. What is the first internal action after discovering a wrong recipient email?</legend><label><input name="q4" type="radio" value="a"/> Wait for a response</label><label><input name="q4" type="radio" value="b"/> Report immediately and preserve facts</label><label><input name="q4" type="radio" value="c"/> Delete the sent email</label></fieldset>
+<fieldset><legend>5. Why are individual accounts important?</legend><label><input name="q5" type="radio" value="a"/> They reduce password length</label><label><input name="q5" type="radio" value="b"/> They allow access to be linked to an authorised person</label><label><input name="q5" type="radio" value="c"/> They remove the need for MFA</label></fieldset>
+<button class="btn primary" type="submit">Submit knowledge check</button>
+</form>
+<div aria-live="polite" class="quiz-result" hidden="" id="quizResult"><strong id="scoreText"></strong><p id="scoreMessage"></p><button class="btn secondary" id="retryBtn" type="button">Try again</button></div>
+</div>
+</section>
+<section class="section action-summary" id="actions">
+<div class="shell">
+<div class="section-head"><p class="kicker">CarePoint executive summary</p><h2>Six actions staff must remember</h2><p>These are the observable behaviours CarePoint expects after this briefing.</p><button class="btn primary no-print" id="quickGuideBtn" type="button">Open one-page quick guide</button></div>
+<div class="action-grid">
+<article><span>01</span><h3>Pause</h3><p>Do not let urgency force a click, disclosure or approval.</p></article>
+<article><span>02</span><h3>Verify</h3><p>Use the approved directory, saved portal or known internal contact.</p></article>
+<article><span>03</span><h3>Protect access</h3><p>Use an individual account, unique passphrase and MFA.</p></article>
+<article><span>04</span><h3>Minimise</h3><p>Access and disclose only the patient information required.</p></article>
+<article><span>05</span><h3>Check twice</h3><p>Confirm identity, recipient, address and attachment before sending.</p></article>
+<article><span>06</span><h3>Report early</h3><p>Preserve facts and notify the Practice Manager immediately.</p></article>
+</div>
+</div>
+</section>
+<section class="section light" id="references">
+<div class="shell references">
+<div class="section-head"><p class="kicker">Evidence base</p><h2>References</h2><p>A separate APA 7 reference list is included in the submission package.</p></div>
+<ol>
+<li>Australian Cyber Security Centre. (2026). <i>Phishing</i>. Cyber.gov.au.</li>
+<li>Australian Digital Health Agency. (2026a). <i>Data breaches</i>.</li>
+<li>Australian Digital Health Agency. (2026b). <i>My Health Record participation obligations</i>.</li>
+<li>Australian Signals Directorate. (2025). <i>Annual cyber threat report 2024 to 2025</i>. Australian Cyber Security Centre.</li>
+<li>Chen, X., Sacré, M., Lenzini, G., Greiff, S., Distler, V., &amp; Sergeeva, A. (2024). The effects of group discussion and role-playing training on self-efficacy, support-seeking, and reporting phishing emails.</li>
+<li>Cobalt. (2025). <i>Healthcare data breach statistics</i>.</li>
+<li>Department of Home Affairs. (n.d.). <i>MediSecure cyber security incident</i>. Australian Government.</li>
+<li>HIPAA Journal. (2025). <i>Healthcare data breach statistics</i>.</li>
+<li>IBM. (2024). <i>Cost of a data breach report 2024</i>.</li>
+<li>KnowBe4. (2025). <i>Phishing by industry benchmarking report</i>.</li>
+<li>Lain, D., Jost, T., Matetić, S., Kostiainen, K., &amp; Čapkun, S. (2024). Content, nudges and incentives: A study on the effectiveness and perception of embedded phishing training. <i>ACM CCS 2024</i>.</li>
+<li>Office of the Australian Information Commissioner. (2025a). <i>Latest Notifiable Data Breach statistics for January to June 2025</i>.</li>
+<li>Office of the Australian Information Commissioner. (2026a). <i>Data breach notifications increase to all-time high in 2025</i>.</li>
+<li>Office of the Australian Information Commissioner. (2026b). <i>Quick reference guide for responding to data breaches</i>.</li>
+<li>Reinheimer, B., Aldag, L., Mayer, P., Mossano, M., Duezguen, R., Lofthouse, B., von Landesberger, T., &amp; Volkamer, M. (2020). An investigation of phishing awareness and education over time. <i>SOUPS 2020</i>.</li>
+<li>Verizon. (2025). <i>2025 Data breach investigations report</i>.</li>
+</ol>
+
+<p class="academic-note">CarePoint Medical Clinic, staff names, contact details and incidents are fictional and created for training purposes.</p>
+</div>
+</section>
+<div aria-labelledby="guideTitle" aria-modal="true" class="modal" hidden="" id="quickGuide" role="dialog"><div class="modal-card"><button aria-label="Close quick guide" class="modal-close" id="closeGuide" type="button">×</button><p class="mini-label">Printable staff quick guide</p><h2 id="guideTitle">Pause. Verify. Protect. Report.</h2><div class="guide-grid"><section><h3>Unexpected message</h3><p>Do not click. Inspect the sender and request. Verify through the approved directory or saved portal. Report suspicious messages.</p></section><section><h3>Patient information</h3><p>Confirm authority and purpose. Access the minimum necessary. Check recipient and attachment twice. Use the approved channel.</p></section><section><h3>Possible incident</h3><p>Stop the action. Preserve the facts. Report immediately to the Practice Manager. Do not investigate alone or delete evidence.</p></section><section><h3>CarePoint contact</h3><p><b>Dr Maya Aziz</b><br/>03 9000 7610<br/>security@carepoint.example</p></section></div><button class="btn primary no-print" onclick="window.print()" type="button">Print guide</button></div></div>
+</main>
+<footer><div class="shell footer-wrap"><div><b>CarePoint CyberSafe</b><p>MIS761 Cybersecurity Strategies | Assessment Task 1</p></div><a href="#top">Back to top</a></div></footer>
+<script>
+'use strict';
+
+const $ = (s, root = document) => root.querySelector(s);
+const $$ = (s, root = document) => [...root.querySelectorAll(s)];
+
+const menuBtn = $('#menuBtn');
+const navLinks = $('#navLinks');
+menuBtn?.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', String(open));
+});
+$$('#navLinks a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  menuBtn?.setAttribute('aria-expanded', 'false');
+}));
+
+const storage = {
+  get(key) {
+    try {
+      return window.localStorage.getItem(key);
+    } catch (error) {
+      return null;
+    }
+  },
+  set(key, value) {
+    try {
+      window.localStorage.setItem(key, value);
+    } catch (error) {
+      // Storage can be unavailable when opened from file:// or in privacy mode.
+    }
+  }
+};
+
+let lastSavedSection = storage.get('carepoint-last-section');
+const updateProgress = () => {
+  const max = document.documentElement.scrollHeight - innerHeight;
+  const value = max > 0 ? (scrollY / max) * 100 : 0;
+  $('#progressBar').style.width = `${Math.min(100, value)}%`;
+
+  const sections = $$('main section[id]');
+  let currentSection = sections[0]?.id || 'home';
+  sections.forEach(section => {
+    if (section.getBoundingClientRect().top < 180) currentSection = section.id;
+  });
+
+  if (currentSection !== lastSavedSection) {
+    storage.set('carepoint-last-section', currentSection);
+    lastSavedSection = currentSection;
+  }
+};
+addEventListener('scroll', updateProgress, {passive: true});
+updateProgress();
+$('#resumeBtn')?.addEventListener('click', () => {
+  const id = storage.get('carepoint-last-section') || 'clinic';
+  document.getElementById(id)?.scrollIntoView({behavior: 'smooth'});
+});
+
+const clues = {
+  sender: 'The display name looks familiar, but the domain is not an approved pathology provider. Verify it independently.',
+  urgency: 'The 30-minute deadline attempts to override normal checking. Urgency is a reason to pause, not a reason to click.',
+  request: 'The message asks you to sign in from an email link. Open the known portal from a saved bookmark instead.',
+  link: 'Do not open the link. Use the approved provider directory or saved pathology portal and report the message.'
+};
+$$('[data-clue]').forEach(btn => btn.addEventListener('click', () => {
+  $('#clueFeedback').textContent = clues[btn.dataset.clue] || '';
+}));
+
+$$('.scenario').forEach(card => {
+  $$('button[data-choice]', card).forEach(btn => btn.addEventListener('click', () => {
+    $$('button[data-choice]', card).forEach(b => b.classList.remove('correct', 'incorrect'));
+    const correct = btn.dataset.choice === card.dataset.answer;
+    btn.classList.add(correct ? 'correct' : 'incorrect');
+    const answer = $(`button[data-choice="${card.dataset.answer}"]`, card);
+    if (!correct) answer?.classList.add('correct');
+    $('.scenario-feedback', card).textContent = correct
+      ? 'Correct. This action limits harm and starts the approved response process.'
+      : 'Not the safest action. Report immediately and use the approved independent process.';
+  }));
+});
+
+const answers = {q1:'b', q2:'c', q3:'a', q4:'b', q5:'b'};
+$('#quizForm')?.addEventListener('submit', e => {
+  e.preventDefault();
+  let score = 0;
+  Object.entries(answers).forEach(([q, a]) => {
+    const picked = $(`input[name="${q}"]:checked`);
+    if (picked?.value === a) score++;
+  });
+  $('#scoreText').textContent = `${score} / 5 correct`;
+  $('#scoreMessage').textContent = score === 5
+    ? 'Excellent. You applied both CarePoint procedures correctly.'
+    : score >= 4 ? 'Good result. Review the missed decision before finishing.'
+    : 'Please revisit the verification and reporting procedures, then try again.';
+  $('#quizResult').hidden = false;
+  $('#quizResult').scrollIntoView({behavior:'smooth', block:'center'});
+});
+$('#retryBtn')?.addEventListener('click', () => {
+  $('#quizForm').reset();
+  $('#quizResult').hidden = true;
+  $('#quizForm').scrollIntoView({behavior:'smooth'});
+});
+
+const roleData = {
+  reception: {title:'Reception: verify high-volume external requests', threat:'Lookalike pathology, referral and patient messages; autocomplete disclosure.', actions:['Use the provider directory rather than contact details inside an unexpected message.','Check recipient and every attachment after autocomplete.','Report suspicious messages and wrong-recipient emails immediately.']},
+  clinician: {title:'Clinicians: protect access during time-critical care', threat:'Credential phishing, visible records and excessive access.', actions:['Use saved clinical portals and deny unexpected MFA prompts.','Access only information needed for the current care purpose.','Lock the screen before leaving the consulting room.']},
+  admin: {title:'Administration: challenge trusted financial changes', threat:'Business email compromise, supplier bank changes and Medicare impersonation.', actions:['Verify payment or identity changes through a known phone number.','Separate request, verification and approval where practical.','Never share credentials, MFA codes or remote access.']},
+  manager: {title:'Practice Manager: own response and assurance', threat:'Delayed escalation, incomplete access control and unmeasured training.', actions:['Maintain the reporting route and 30-day assessment process.','Review MFA, shared accounts and least-privilege access.','Track reporting behaviour and run a six-monthly refresher.']}
+};
+function renderRole(key){
+  const d = roleData[key];
+  $('#rolePanel').innerHTML = `<div><p class="mini-label">Primary exposure</p><h3>${d.title}</h3><p>${d.threat}</p></div><ul>${d.actions.map(x=>`<li>${x}</li>`).join('')}</ul>`;
+  $$('[data-role]').forEach(b=>b.setAttribute('aria-selected', String(b.dataset.role===key)));
+}
+$$('[data-role]').forEach(btn=>btn.addEventListener('click',()=>renderRole(btn.dataset.role)));
+renderRole('reception');
+
+const modal = $('#quickGuide');
+$('#quickGuideBtn')?.addEventListener('click',()=>{ modal.hidden=false; $('#closeGuide').focus(); });
+$('#closeGuide')?.addEventListener('click',()=>{ modal.hidden=true; $('#quickGuideBtn').focus(); });
+modal?.addEventListener('click',e=>{ if(e.target===modal) modal.hidden=true; });
+addEventListener('keydown',e=>{ if(e.key==='Escape' && modal && !modal.hidden) modal.hidden=true; });
+
+// Interactive wrong recipient email activity
+(() => {
+  const activity = $('#wrongRecipientActivity');
+  if (!activity) return;
+
+  const step2 = $('#recipientStep2');
+  const step3 = $('#recipientStep3');
+  const firstFeedback = $('#recipientFirstFeedback');
+  const safetyFeedback = $('#recipientSafetyFeedback');
+  const sentFeedback = $('#recipientSentFeedback');
+  const complete = $('#recipientComplete');
+
+  const unlock = (section, feedback, message) => {
+    section.classList.remove('locked');
+    section.classList.add('unlocked');
+    section.setAttribute('aria-disabled', 'false');
+    feedback.textContent = message;
+    feedback.className = 'activity-feedback';
+  };
+
+  $$('[data-recipient-first]', activity).forEach(button => {
+    button.addEventListener('click', () => {
+      $$('[data-recipient-first]', activity).forEach(item => item.classList.remove('correct', 'incorrect'));
+      const correct = button.dataset.recipientFirst === 'right';
+      button.classList.add(correct ? 'correct' : 'incorrect');
+      firstFeedback.className = `activity-feedback ${correct ? 'good' : 'bad'}`;
+      if (correct) {
+        firstFeedback.textContent = "Correct. CarePoint must verify the recipient from the patient record. Outlook autocomplete is not an identity check.";
+        unlock(step2, safetyFeedback, 'Select all four required safety checks.');
+      } else {
+        firstFeedback.textContent = 'Not safe. The first action is to verify the intended recipient using an approved CarePoint source.';
+      }
+    });
+  });
+
+  $('#checkRecipientSafety')?.addEventListener('click', () => {
+    const checks = $$('input[type="checkbox"]', step2);
+    const completeChecks = checks.length > 0 && checks.every(check => check.checked);
+    safetyFeedback.className = `activity-feedback ${completeChecks ? 'good' : 'bad'}`;
+    if (completeChecks) {
+      safetyFeedback.textContent = 'Correct. The recipient, attachments, minimum necessary information and autocomplete result have all been checked.';
+      unlock(step3, sentFeedback, 'Choose the required response after an accidental disclosure.');
+    } else {
+      const remaining = checks.filter(check => !check.checked).length;
+      safetyFeedback.textContent = `Complete every required check. ${remaining} ${remaining === 1 ? 'step remains' : 'steps remain'}.`;
+    }
+  });
+
+  $$('[data-recipient-sent]', activity).forEach(button => {
+    button.addEventListener('click', () => {
+      $$('[data-recipient-sent]', activity).forEach(item => item.classList.remove('correct', 'incorrect'));
+      const correct = button.dataset.recipientSent === 'right';
+      button.classList.add(correct ? 'correct' : 'incorrect');
+      sentFeedback.className = `activity-feedback ${correct ? 'good' : 'bad'}`;
+      if (correct) {
+        sentFeedback.textContent = 'Correct. Immediate reporting allows CarePoint to contain the disclosure, preserve evidence and assess notification duties.';
+        complete.hidden = false;
+        complete.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+      } else {
+        sentFeedback.textContent = 'Not safe. Do not hide, delete or delay a suspected patient information disclosure. Report it immediately.';
+      }
+    });
+  });
+
+  $('#resetRecipientActivity')?.addEventListener('click', () => {
+    $$('button', activity).forEach(button => button.classList.remove('correct', 'incorrect'));
+    $$('input[type="checkbox"]', activity).forEach(check => { check.checked = false; });
+    [step2, step3].forEach(section => {
+      section.classList.add('locked');
+      section.classList.remove('unlocked');
+      section.setAttribute('aria-disabled', 'true');
+    });
+    firstFeedback.textContent = 'Choose the safest first action.';
+    firstFeedback.className = 'activity-feedback';
+    safetyFeedback.textContent = 'Complete Step 1 to unlock this check.';
+    safetyFeedback.className = 'activity-feedback';
+    sentFeedback.textContent = 'Complete Step 2 to unlock this decision.';
+    sentFeedback.className = 'activity-feedback';
+    complete.hidden = true;
+    activity.scrollIntoView({behavior: 'smooth', block: 'start'});
+  });
+})();
+
+
+
+// Professional motion and wayfinding enhancements
+(() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealTargets = [
+    ...document.querySelectorAll('.section-head, .role-grid article, .control-grid article, .scenario, .panel, .kpi-grid article, .bia-grid article, .action-grid article, .matrix-card, .heatmap-card, .priority-card, .procedure-card, .incident, .case-facts, .case-relevance, .flow-card, .comparison-card, .wrong-recipient-activity, .critical-note, .contact-card, .timeline article')
+  ];
+
+  revealTargets.forEach((el, index) => {
+    el.classList.add('reveal-ready');
+    if (el.matches('.case-facts,.flow-card,.heatmap-card')) el.classList.add('reveal-left');
+    if (el.matches('.case-relevance,.comparison-card,.priority-card')) el.classList.add('reveal-right');
+    el.style.transitionDelay = `${Math.min((index % 4) * 70, 210)}ms`;
+  });
+
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealTargets.forEach(el => el.classList.add('is-visible'));
+  } else {
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.13, rootMargin: '0px 0px -7% 0px' });
+    revealTargets.forEach(el => revealObserver.observe(el));
+  }
+
+  // Sequentially reveal the four-step procedures.
+  const processTargets = document.querySelectorAll('.workflow, .response-grid');
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const processObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('sequence-active');
+          processObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.35 });
+    processTargets.forEach(el => processObserver.observe(el));
+  } else {
+    processTargets.forEach(el => el.classList.add('sequence-active'));
+  }
+
+  // Animate selected numerical evidence once. Prefixes and suffixes remain intact.
+  const numberTargets = document.querySelectorAll('.evidence-strip strong, .threat-rows b, .kpi-grid strong');
+  const animateNumber = el => {
+    if (el.dataset.counted === 'true') return;
+    const raw = el.textContent.trim();
+    const match = raw.match(/^(.*?)(\d+(?:\.\d+)?)(.*)$/);
+    if (!match) return;
+    const [, prefix, numeric, suffix] = match;
+    const target = Number(numeric);
+    if (!Number.isFinite(target)) return;
+    el.dataset.counted = 'true';
+    el.classList.add('counting');
+    if (reduceMotion) return;
+    const duration = 900;
+    const start = performance.now();
+    const decimals = numeric.includes('.') ? numeric.split('.')[1].length : 0;
+    const step = now => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = target * eased;
+      el.textContent = `${prefix}${decimals ? value.toFixed(decimals) : Math.round(value)}${suffix}`;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const countObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateNumber(entry.target);
+          countObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.7 });
+    numberTargets.forEach(el => countObserver.observe(el));
+  }
+
+  // Highlight the current navigation item while the marker scrolls.
+  const navAnchors = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const navSections = navAnchors
+    .map(a => ({ anchor: a, section: document.querySelector(a.getAttribute('href')) }))
+    .filter(item => item.section);
+
+  const updateActiveNav = () => {
+    let current = navSections[0];
+    for (const item of navSections) {
+      if (item.section.getBoundingClientRect().top <= 150) current = item;
+    }
+    navAnchors.forEach(a => a.classList.remove('active-section'));
+    current?.anchor.classList.add('active-section');
+  };
+  updateActiveNav();
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+  // Heat-map markers animate only when the visual becomes meaningful on screen.
+  const heatmap = document.querySelector('.heatmap');
+  if (heatmap) {
+    if (reduceMotion || !('IntersectionObserver' in window)) heatmap.classList.add('is-visible');
+    else {
+      const heatObserver = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          heatmap.classList.add('is-visible');
+          heatObserver.disconnect();
+        }
+      }, { threshold: 0.45 });
+      heatObserver.observe(heatmap);
+    }
+  }
+})();
+
+</script>
+</body>
+</html>
